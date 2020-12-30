@@ -1,15 +1,23 @@
 import random, sys
+import os
 
 userName = "sauravDutt"
 password = "sauravd069"
 
 while True :
+
+    def clear(): 
+        os.system('clear') 
     name = input("Enter a User Name : \n")
+    clear()
     if name != userName:
         continue
     if name == userName:
-        print("Welcome back Saurav")
+        print("\n    *******************************************    ")
+        print("                  Welcome back Saurav")
+        print("    *******************************************    ")
         passwordUser = input("Enter your password : \n")
+        clear()
         if passwordUser == password:
             print("\n    *******************************************    ")
             print("    *********    _________________    *********    ")
@@ -19,6 +27,9 @@ while True :
             print("    *******************************************    \n")
             print("\n ************************************************* ")
             input("            PRESS ANY KEY TO CONTINU     :-  ")
+            
+            clear()
+            
             print(" _____________________________________________________________________\n")
             print("             Type the following for different functions     ")
             print(" _____________________________________________________________________\n")
@@ -27,6 +38,7 @@ while True :
             print("  ideaProbability - To get accurate pridiction on your next big Idea " )
             print(" _____________________________________________________________________\n")
             break
+
 
 
 def rockPaperSc ():
@@ -111,7 +123,9 @@ quit = "quit"
 rockPaperScissors = "Rockpaper"
 pridiction = 'ideaProbability'
 if userInput == quit :
-    print("\nHave Good Day!!\n")
+    print("\n ************************************************* ")
+    print("               Good day, to you sir!")
+    print(" ************************************************* \n")
     sys.exit()
 elif userInput == rockPaperScissors :
     rockPaperSc()
