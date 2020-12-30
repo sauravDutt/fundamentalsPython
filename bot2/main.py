@@ -18,12 +18,14 @@ while True :
             print("    *********       sauravDutt        *********    ")
             print("    *******************************************    \n")
             print("\n ************************************************* ")
-            print("               Type the following for different functions     ")
-            print(" _________________________________________________________________________________________id_\n")
-            print("                               quit - Exit                     " )
-            print("                   Rockpaper - To play Rock Paper Sissors        " )
-            print("       ideaProbability - To get accurate pridiction on your next big Idea        " )
-            print(" __________________________________________________________________________________________\n")
+            input("            PRESS ANY KEY TO CONTINU     :-  ")
+            print(" _____________________________________________________________________\n")
+            print("             Type the following for different functions     ")
+            print(" _____________________________________________________________________\n")
+            print("             quit - Exit                     " )
+            print("        Rockpaper - To play Rock Paper Sissors        " )
+            print("  ideaProbability - To get accurate pridiction on your next big Idea " )
+            print(" _____________________________________________________________________\n")
             break
 
 
@@ -109,6 +111,7 @@ quit = "quit"
 rockPaperScissors = "Rockpaper"
 pridiction = 'ideaProbability'
 if userInput == quit :
+    print("\nHave Good Day!!\n")
     sys.exit()
 elif userInput == rockPaperScissors :
     rockPaperSc()
