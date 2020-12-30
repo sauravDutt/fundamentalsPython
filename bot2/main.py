@@ -18,11 +18,12 @@ while True :
             print("    *********       sauravDutt        *********    ")
             print("    *******************************************    \n")
             print("\n ************************************************* ")
-            print("      Type the following for different functions     ")
-            print(" ___________________________________________________ \n")
-            print("                     quit - Exit                     ")
-            print("       Rockpaper - To play Rock Paper Sissors        ")
-            print(" ___________________________________________________\n")
+            print("               Type the following for different functions     ")
+            print(" _________________________________________________________________________________________id_\n")
+            print("                               quit - Exit                     " )
+            print("                   Rockpaper - To play Rock Paper Sissors        " )
+            print("       ideaProbability - To get accurate pridiction on your next big Idea        " )
+            print(" __________________________________________________________________________________________\n")
             break
 
 
@@ -91,14 +92,27 @@ def rockPaperSc ():
                 print('You lost this round :( ')
                 losses = losses + 1
 
-
+def getAnswer(answerNumber):
+    if answerNumber == 1 :
+        return " __________________________________________________________________________________________\nOkay Okay we can concider this plan !!\n ______________________________________________________________________________________"
+    elif answerNumber == 2 :
+        return " __________________________________________________________________________________________\nWe should think over this plan !!!\n __________________________________________________________________________________________" 
+    elif answerNumber == 3 :
+        return " __________________________________________________________________________________________\nNot interested, might concider it as plan B but definitly not plan A !!\n _____________________________________________________"
+    elif answerNumber == 4 :
+        return "What plan, you are calling this bullshit a plan"
+ 
     
 userInput = input("            Enter your option  :-    ")
 
 quit = "quit"
 rockPaperScissors = "Rockpaper"
+pridiction = 'ideaProbability'
 if userInput == quit :
     sys.exit()
 elif userInput == rockPaperScissors :
     rockPaperSc()
-
+elif userInput == pridiction :
+    r = random.randint(1, 4)
+    pridict = getAnswer(r)
+    print(pridict)
