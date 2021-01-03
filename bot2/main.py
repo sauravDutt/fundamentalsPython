@@ -7,16 +7,20 @@ quit = "quit"
 documentation = "doc"
 sauravDutt = "sd"
 
+
+
 def clear(): 
     os.system('clear') 
 
-def authentication(name):
+
+
+def authentication(name, passwordUser):
     
     if name == userName:
         print("\n    *******************************************    ")
         print("                  Welcome back Saurav")
         print("    *******************************************    \n")
-        passwordUser = input("Enter your password : \n")
+        
         clear()
         if passwordUser == password:
             print("\n    *******************************************    ")
@@ -48,6 +52,8 @@ def authentication(name):
             print("\n ************************************************* ")
             input("            PRESS ANY KEY TO RESTART     :-  ")
             clear()
+
+
 def menu(userInput):
     if userInput == quit :
         clear()
@@ -69,16 +75,19 @@ def menu(userInput):
         print("             More features coming soon!!!")
         print(" ************************************************* \n")
 
+
 while True :
-    
     name = input("Enter a User Name : \n")
     clear()
+    passwordUser = input("Enter your password : \n")
     if name != userName:
         continue
-    authentication(name)
+    if passwordUser != password:
+        continue
+    authentication(name, passwordUser)
     userInput = input("            Enter your option  :-    ")
     menu(userInput)
-   
+    break
 
 
 
